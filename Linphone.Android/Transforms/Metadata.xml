@@ -1,0 +1,27 @@
+<metadata>
+  <!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+  <attr path="/api/package[@name='org.linphone']/class[@name='R.attr']/field[@name='handle']" name="type">IntPtr</attr>
+  <attr path="/api/package[@name='org.linphone']/class[@name='R.attr']/field[@name='handle']" name="type-generic-aware">IntPtr</attr>
+  <attr path="/api/package[@name='org.linphone']/class[@name='R.id']/field[@name='handle']" name="type">IntPtr</attr>
+  <attr path="/api/package[@name='org.linphone']/class[@name='R.id']/field[@name='handle']" name="type-generic-aware">IntPtr</attr>
+
+  <attr path="/api/package[@name='org.linphone.core']/interface[@name='LinphoneCoreListener']/method[@name='notifyReceived' and count(parameter)=4 and parameter[1][@type='org.linphone.core.LinphoneCore'] and parameter[2][@type='org.linphone.core.LinphoneCall'] and parameter[3][@type='org.linphone.core.LinphoneAddress'] and parameter[4][@type='byte[]']]"
+      name="managedName">NotifyReceivedCall</attr>
+  <attr path="/api/package[@name='org.linphone.core']/class[@name='LinphoneCoreListenerBase']/method[@name='notifyReceived' and count(parameter)=4 and parameter[1][@type='org.linphone.core.LinphoneCore'] and parameter[2][@type='org.linphone.core.LinphoneCall'] and parameter[3][@type='org.linphone.core.LinphoneAddress'] and parameter[4][@type='byte[]']]"
+    name="managedName">NotifyReceivedCall</attr>
+  <attr path="/api/package[@name='org.linphone.core.tutorials']/class[@name='TutorialBuddyStatus']/method[@name='notifyReceived' and count(parameter)=4 and parameter[1][@type='org.linphone.core.LinphoneCore'] and parameter[2][@type='org.linphone.core.LinphoneCall'] and parameter[3][@type='org.linphone.core.LinphoneAddress'] and parameter[4][@type='byte[]']]"
+    name="managedName">NotifyReceivedCall</attr>
+  <attr path="/api/package[@name='org.linphone.core.tutorials']/class[@name='TutorialChatRoom']/method[@name='notifyReceived' and count(parameter)=4 and parameter[1][@type='org.linphone.core.LinphoneCore'] and parameter[2][@type='org.linphone.core.LinphoneCall'] and parameter[3][@type='org.linphone.core.LinphoneAddress'] and parameter[4][@type='byte[]']]"
+    name="managedName">NotifyReceivedCall</attr>
+  <attr path="/api/package[@name='org.linphone.core.tutorials']/class[@name='TutorialHelloWorld']/method[@name='notifyReceived' and count(parameter)=4 and parameter[1][@type='org.linphone.core.LinphoneCore'] and parameter[2][@type='org.linphone.core.LinphoneCall'] and parameter[3][@type='org.linphone.core.LinphoneAddress'] and parameter[4][@type='byte[]']]"
+   name="managedName">NotifyReceivedCall</attr>
+  <attr path="/api/package[@name='org.linphone.core.tutorials']/class[@name='TutorialRegistration']/method[@name='notifyReceived' and count(parameter)=4 and parameter[1][@type='org.linphone.core.LinphoneCore'] and parameter[2][@type='org.linphone.core.LinphoneCall'] and parameter[3][@type='org.linphone.core.LinphoneAddress'] and parameter[4][@type='byte[]']]"
+   name="managedName">NotifyReceivedCall</attr>
+
+</metadata>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:Xaml.Converters;assembly=Xaml"
+             x:Class="TourAssistant.Client.Core.Pages.AreaMapView"
+             Title="Tour Assistant - Ваш тур - Информация">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ByteArrayToImageSourceConverter x:Key="ByteArrayToImageSourceConverter"/>
+            <converters:NotBoolConverter x:Key="NotBoolConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+	<StackLayout>
+        <Label>
+            <Label.Triggers>
+                <DataTrigger TargetType="Label"
+                         Binding="{Binding AreaType}" Value="country">
+                    <Setter Property="Text" Value="Карта страны:" />
+                </DataTrigger>
+                <DataTrigger TargetType="Label"
+                         Binding="{Binding AreaType}" Value="kurort">
+                    <Setter Property="Text" Value="Карта курорта:" />
+                </DataTrigger>
+                <DataTrigger TargetType="Label"
+                         Binding="{Binding AreaType}" Value="hotel">
+                    <Setter Property="Text" Value="Карта отеля:" />
+                </DataTrigger>
+            </Label.Triggers>
+        </Label>
+        <Image Source="{Binding Image, Converter={StaticResource ByteArrayToImageSourceConverter}}" 
+               IsVisible="{Binding FailToObtainData, Converter={StaticResource NotBoolConverter}}">
+        </Image>
+        <Label IsVisible="{Binding FailToObtainData}">
+            Ошибка получения данных
+        </Label>
+    </StackLayout>
+</ContentPage>

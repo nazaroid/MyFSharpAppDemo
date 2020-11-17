@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    x:Class="SipPhone.Core.Pages.Styles">
+    <Style x:Key="OfflineTextStyle" TargetType="Label">
+        <Setter Property="TextColor" Value="Gray" />
+        <Setter Property="Text" Value="Offline" />
+    </Style>
+  <Style x:Key="OnlineTextStyle" TargetType="Label">
+    <Setter Property="TextColor" Value="Green" />
+    <Setter Property="Text" Value="Online" />
+  </Style>
+  <Style x:Key="RegisteringTextStyle" TargetType="Label">
+    <Setter Property="TextColor" Value="Yellow" />
+    <Setter Property="Text" Value="Registering..." />
+  </Style>
+  <Style x:Key="RegistrationErrorTextStyle" TargetType="Label">
+    <Setter Property="TextColor" Value="Red" />
+    <Setter Property="Text" Value="Registration error" />
+  </Style>
+</ResourceDictionary>

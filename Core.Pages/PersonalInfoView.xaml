@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TourAssistant.Client.Core.Pages.PersonalInfoView"
+             Title="Tour Assistant - Личные данные">
+
+    <StackLayout>
+
+        <Label Text="{Binding ShortName}" 
+               HorizontalOptions="Center" 
+               FontSize="30" FontAttributes="Bold"></Label>
+ 
+        <TableView>
+            <TableRoot>
+                <TableSection>
+                    <TextCell Text="Паспорт:" Detail="{Binding Passport}"></TextCell>
+                    <TextCell Text="Страховка:" Detail="{Binding Insurance}"></TextCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+
+    </StackLayout>
+   
+</ContentPage>

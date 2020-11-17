@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sipPhone="clr-namespace:SipPhone.Core.Pages;assembly=SipPhone.Core.Pages"
+             x:Class="SipPhone.Core.Pages.SipPhoneView">
+  <ContentPage.Resources>
+    <ResourceDictionary MergedWith="sipPhone:Styles">
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  <StackLayout Orientation="Vertical">
+
+    <StackLayout x:Name="LayoutRoot" Orientation="Horizontal">
+      <Label x:Name="StatusText" VerticalOptions="Center">
+        <Label.Triggers>
+          <DataTrigger TargetType="Label"
+                   Binding="{Binding RegistrationStatus}" Value="Online">
+            <Setter Property="Style" Value="{StaticResource OnlineTextStyle}" />
+          </DataTrigger>
+          <DataTrigger TargetType="Label"
+                  Binding="{Binding RegistrationStatus}" Value="Offline">
+            <Setter Property="Style" Value="{StaticResource OfflineTextStyle}" />
+          </DataTrigger>
+          <DataTrigger TargetType="Label"
+                  Binding="{Binding RegistrationStatus}" Value="Registering">
+            <Setter Property="Style" Value="{StaticResource RegisteringTextStyle}" />
+          </DataTrigger>
+          <DataTrigger TargetType="Label"
+                  Binding="{Binding RegistrationStatus}" Value="Error">
+            <Setter Property="Style" Value="{StaticResource RegistrationErrorTextStyle}" />
+          </DataTrigger>
+        </Label.Triggers>
+      </Label>
+    </StackLayout>
+
+    <Entry x:Name="AddressBox" />
+
+    <ListView ItemsSource="{Binding Contacts}">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <StackLayout Orientation="Horizontal">
+              <Button Text="{Binding Address}" Command="{Binding Call}" />
+            </StackLayout>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+
+  </StackLayout>
+
+</ContentPage>

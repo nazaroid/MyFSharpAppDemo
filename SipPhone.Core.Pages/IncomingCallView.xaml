@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SipPhone.Core.Pages.IncomingCallView">
+	
+  <StackLayout>
+    <Label Text="{Binding From.Address}" VerticalOptions="Center" HorizontalOptions="Center" />
+    <Label Text="ВХОДЯЩИЙ ЗВОНОК" VerticalOptions="Center" HorizontalOptions="Center" />
+    <Button Command="{Binding End}" Text="Завершить"></Button>
+  </StackLayout>
+</ContentPage>

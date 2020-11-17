@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TourAssistant.Client.Core.Pages.AreaItemInfoMenuView"
+             Title="Tour Assistant - Ваш тур - Информация">
+    <StackLayout>
+
+        <Label>
+            <Label.Triggers>
+                <DataTrigger TargetType="Label"
+                         Binding="{Binding AreaType}" Value="country">
+                    <Setter Property="Text" Value="Страна:" />
+                </DataTrigger>
+                <DataTrigger TargetType="Label"
+                         Binding="{Binding AreaType}" Value="kurort">
+                    <Setter Property="Text" Value="Курорт:" />
+                </DataTrigger>
+                <DataTrigger TargetType="Label"
+                         Binding="{Binding AreaType}" Value="hotel">
+                    <Setter Property="Text" Value="Отель:" />
+                </DataTrigger>
+            </Label.Triggers>
+        </Label>
+        
+        <Button Text="Карта"
+            Command="{Binding ShowMapPage}"
+            BorderWidth="1"
+            FontSize="Large" />
+        <Button Text="Описание"
+            Command="{Binding ShowDescriptionPage}"
+            BorderWidth="1"
+            FontSize="Large" />
+
+        <ActivityIndicator IsRunning="{Binding IsBusy}" HorizontalOptions="Center" VerticalOptions="Center" />
+    </StackLayout>
+    
+</ContentPage>

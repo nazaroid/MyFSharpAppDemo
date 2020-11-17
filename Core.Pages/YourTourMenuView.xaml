@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TourAssistant.Client.Core.Pages.YourTourMenuView"
+             Title="Tour Assistant - Ваш тур">
+    <StackLayout Orientation="Vertical">
+        <Button Text="Личные данные" 
+                Command="{Binding ShowPersonalInfoPage}" 
+                BorderWidth ="1"
+                FontSize="Large"/>
+        <Button Text="Перелет" 
+                Command="{Binding ShowFlightInfoPage}" 
+                BorderWidth ="1"
+                FontSize="Large"/>
+        <Button Command="{Binding ShowAreaInfoPage}" 
+                BorderWidth ="1"
+                FontSize="Large">
+            <Button.Text>
+Информация 
+(страна, курорт, отель)
+            </Button.Text>
+        </Button>
+            <Button Text="Сервисы" 
+                Command="{Binding ShowServicesPage}" 
+                BorderWidth ="1"
+                FontSize="Large"/>
+    </StackLayout>
+</ContentPage>
